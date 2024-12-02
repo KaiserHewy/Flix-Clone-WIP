@@ -4,12 +4,51 @@
   box-sizing: border-box;
 }
 
-body {
+html {
+  width: 100%;  
+  height: 100%;
+}
+
+.background-img {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1192,h_670,q_70,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.background-mask {
   background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(28,23,23,1) 75%, rgb(63, 40, 40) 93%, rgb(56, 31, 41) 96%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.952) 0%, rgba(19, 15, 15, 0.938) 75%, rgba(63, 40, 40, 0.897) 93%, rgba(56, 31, 41, 0.911) 96%, rgb(0, 0, 0) 100%);
+  position: absolute;
+  min-height: 100%; 
+  width: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: blur(15px);
+}
+
+body {
+  height: 100%;
+  width: 100%;
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
+@media (min-width: 1720px) {
+  main { 
+    margin-left: 10em;
+    margin-right: 10em;
+  }}
 
 .btn {
   border-radius: 2em;
@@ -21,7 +60,8 @@ body {
 }
 
 header {
-  background: rgb(0,0,0);
+  background: rgba(0, 0, 0, 0.932);
+  backdrop-filter: blur(5px);
   position: fixed;
   z-index: 3;
   top: 0;
@@ -32,12 +72,19 @@ header {
 @media (min-width: 600px) {
   header { 
     background-color: rgba(255, 0, 0, 0);
+    backdrop-filter: none;
   }}
 
 .nav {
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: 1920px) {
+  .nav { 
+    max-width: 2100px;
+    margin: auto;
+  }}
 
 .nav-brand {
   height: 2.2em;
@@ -46,14 +93,19 @@ header {
 .nav-logo {
   width: 100px;
   height: auto;
-  position: fixed;
-  top: 25;
-  left: 20;
+  position: relative;
+  top: 17;
+  left: 2em;
   z-index: 3;
 }
 
+@media (min-width: 960px) {
+  .nav-logo { 
+    width: 158px;
+  }}
+
 .nav-item {
-  position: fixed;
+  position: relative;
   top: 25;
   right: 30;
   z-index: 3;
@@ -65,25 +117,38 @@ header {
   border: none;
 }
 
+/* .signin-button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: rgb(255, 255, 255) 2px solid;
+  border-radius: 2em;
+} */
+
 .signin-button:hover {
   background-color: #cecece;
+  cursor: pointer;
 }
 
 .nav-tab-container {
   display: flex;
   list-style: none;
-  padding-top: 50px;
+  padding-top: 45px;
   font-size: .85em;
+  /* background-color: #000000;   */
 }
 
 @media (min-width: 600px) {
   .nav-tab-container {
     border-radius: 2em;
-    background-color: none;
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 55px;
+    padding-top: 45px;
   }}
 
 
@@ -105,6 +170,7 @@ header {
 
 .nav-tab a {
   text-decoration: none;
+  color: white;
 }
 
 .nav-tab li {
@@ -128,7 +194,7 @@ header {
 .hero-section {
   width: 100%;
   margin: auto;
-  padding-top: 9.8em;
+  margin-top: 9.4em;
 }
 
 @media (min-width: 1920px) {
@@ -143,7 +209,7 @@ header {
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  margin: -10px 5% 12px;
+  margin: -10px 1.5em 12px;
   height: 370px;
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1192,h_670,q_70,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs");
   background-position: center;
@@ -155,6 +221,12 @@ header {
   border-right: 0; 
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.123);
 }
+
+@media (min-width: 600px) {
+  .hero-container {
+    margin: -10px 2em 12px;
+}}
+
 
 @media (min-width: 960px) {
   .hero-container {
@@ -438,7 +510,6 @@ outline-offset: 2px;
   font-size: .8em;
   font-weight: 400;
   width: 100%;
-  
 }
 
 @media (min-width: 600px) {
@@ -528,8 +599,7 @@ outline-offset: 2px;
 
 .thumbTile__image {
   width: 100%;
-  border-radius: 5%;
-  
+  border-radius: 5%; 
 }
 
 .thumbTiles .swiper-button-prev,
@@ -622,6 +692,7 @@ outline-offset: 2px;
 @media (min-width: 960px) {
   .plans-container {
     margin: 0 6px;
+    /* max-width: 520px; */
   }}
 
 #plans-container-1 {
@@ -729,11 +800,11 @@ outline-offset: 2px;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(39, 37, 37);
-  margin: 4px;
+  margin: 6px;
   border-radius: 1em;
   border: 2px solid;
   border-color: #313030;
-  height: 100px;
+  height: 140px;
   padding: 1.5em;
   font-weight: 600;
   flex-grow: 1;
@@ -744,9 +815,18 @@ outline-offset: 2px;
   .info-container {
     max-width: 500px;
     width: 250px;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    position: relative;
   }}
+
+  @media (min-width: 1720px) {
+    .info-container {
+      height: 120px;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }}
 
 .info-icon {
   max-width: 80px; 
@@ -755,6 +835,8 @@ outline-offset: 2px;
 
 @media (min-width: 960px) {
   .info-icon {
-    max-width: 50px; 
-    align-self: flex-end;
+    max-width: 50px;
+    position: absolute;
+    right: 20;
+    bottom: 15;
   }}
