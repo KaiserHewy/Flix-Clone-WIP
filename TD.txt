@@ -1,0 +1,3 @@
+-Fixed background following scroll, but absolute cuts(probably most easily solved through making a masked image in photoshop) 
+-plans container no transition between color highlight
+-use x and + images from last project

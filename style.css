@@ -32,8 +32,6 @@ html {
   width: 100%; 
   top: 0; 
   left: 0;
-  right: 0;
-  bottom: 0;
   z-index: -1;
   backdrop-filter: blur(15px);
 }
@@ -45,10 +43,23 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-@media (min-width: 1720px) {
+/* main {
+} */
+
+@media (min-width: 600px) {
   main { 
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2100px;
+    padding-left: calc((5vw - 5%/2));
+    padding-right: calc((5vw - 5%/2));
+  }}
+
+@media (min-width: 1920px) {
+  main { 
+    padding-left: calc((15vw - 15%/2));
+    padding-right: calc((15vw - 15%/2));
   }}
 
 .btn {
@@ -95,10 +106,15 @@ header {
   width: 100px;
   height: auto;
   position: relative;
-  top: 17;
-  left: 2em;
+  top: 1.5em;
+  left: 1.5em;
   z-index: 3;
 }
+
+@media (min-width: 600px) {
+  .nav-logo { 
+    left: 2em;
+  }}
 
 @media (min-width: 960px) {
   .nav-logo { 
@@ -107,27 +123,27 @@ header {
 
 .nav-item {
   position: relative;
-  top: 25;
-  right: 30;
+  top: 1.5em;
+  right: 1.5em;
   z-index: 3;
 }
 
+@media (min-width: 600px) {
+  .nav-item { 
+    right: 2.5em;
+  }}
+
+  @media (min-width: 1920px) {
+    .nav-item { 
+      top: 1.7em;
+    }}
+  
+
 .signin-button {
-  font-weight: 600;
+  font-weight: 650;
   font-size: .9em;
   border: none;
 }
-
-/* .signin-button::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: rgb(255, 255, 255) 2px solid;
-  border-radius: 2em;
-} */
 
 .signin-button:hover {
   background-color: #cecece;
@@ -139,7 +155,7 @@ header {
   list-style: none;
   padding-top: 45px;
   font-size: .85em;
-  /* background-color: #000000;   */
+  background-color: #000000;  
 }
 
 @media (min-width: 600px) {
@@ -402,11 +418,6 @@ fieldset {
   background-color: #1b1b1bb6;
 }
 
-/* @media (min-width: 600px) {
-#email {
-}
-} */
-
 input, select, textarea{
   color: #ffffff;
   padding-left: 20px; 
@@ -501,7 +512,7 @@ outline-offset: 2px;
   display: flex;
   justify-content: center;
   padding: 20px 20px 20px ;
-  background-color: #86868618;
+  background-color: #ffeded1a;
   backdrop-filter: blur(5px);
   border-radius: 1em;
   flex-direction: column;
@@ -518,7 +529,6 @@ outline-offset: 2px;
   flex-direction: row;
   justify-content: space-between;
   height: 80px;
-  max-width: 1500px;
 }}
 
 .learn-more-title {
@@ -682,23 +692,27 @@ outline-offset: 2px;
   }}
   
 .plans-container {
-  padding: 10px 20px;
+  padding: 1.5em 1.5em 2em 1.5em;
   margin: 4px 0;
   width: 100%;
   border-radius: 1em;
   border: 2px solid #48597e6b;
   transition: all .25s ease-in-out;
+  position: relative;
 }
 
 @media (min-width: 960px) {
   .plans-container {
     margin: 0 6px;
-    /* max-width: 520px; */
   }}
+
+/* @media (min-width: 1920px) {
+  .plans-section { 
+  
+  }} */
 
 #plans-container-1 {
   background: linear-gradient(157deg, rgba(27,65,110,1) 0%, rgb(6, 4, 27) 78%);
-  
 }
 
 #plans-container-2 {
@@ -767,7 +781,11 @@ outline-offset: 2px;
 .plans-price {
   font-weight: 500;
   color: #cecece;
+  justify-self: baseline;
+  position: absolute;
+  bottom: 10;
 }
+
 
 /* INFO SECTION */
 
@@ -841,3 +859,41 @@ outline-offset: 2px;
     right: 20;
     bottom: 15;
   }}
+
+  /* FAQ */
+
+ .FAQ-header {
+    padding-top: 20px;  
+    margin: 0 3.5% 5px;
+  }
+
+  .FAQ-list-container {
+    margin: 0 3.5% 12px;
+  }
+
+ .FAQ-list {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .FAQ-title {
+  color: white;
+  width: 100%;
+  background-color: rgb(39, 37, 37);
+  border-radius: 1em;
+  border: 2px solid;
+  border-color: #313030;
+  margin: 4px;
+  height: 4em;
+  text-align: left;
+  padding-left: 1em;
+  font-weight: 600;
+  font-size: .8em;
+ }
+
+
+  /* FOOTER */
+
+  footer {
+    margin: 0 3.5% 12px;
+  }
