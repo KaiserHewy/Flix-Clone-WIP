@@ -1,3 +1,4 @@
 -Fixed background following scroll, but absolute cuts(probably most easily solved through making a masked image in photoshop) 
+-width lock at certain resolutions not optimal need a container for everything then work down from there
 -plans container no transition between color highlight
--use x and + images from last project
+-use x and + images 
