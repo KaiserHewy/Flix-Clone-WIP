@@ -1,3 +1,5 @@
+// THUMBNAIL SWIPER
+
 var mySwiper = new Swiper('.swiper', {
   // Optional parameters
   spaceBetween: 5,
@@ -69,3 +71,17 @@ titleBox3.addEventListener("mouseover", titleHighlight3);
 titleBox1.addEventListener("mouseout", titleClear1);
 titleBox2.addEventListener("mouseout", titleClear1);
 titleBox3.addEventListener("mouseout", titleClear1);
+
+// FAQ DROPDOWN
+const faqs = document.querySelectorAll(".FAQ")
+
+faqs.forEach((faq)=>{
+  faq.addEventListener("click",()=>{
+    if(faq.classList.contains("active")) {
+      faq.classList.remove("active")
+    }else{
+      faq.classList.add("active")
+    }
+  })
+})
+
