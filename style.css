@@ -43,8 +43,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* main {
-} */
 
 @media (min-width: 600px) {
   main { 
@@ -890,37 +888,40 @@ outline-offset: 2px;
   background-color: #2D2D2D;
   border-radius: 1em;
   border: 2px solid;
-  border-color: #313030;
-  /* margin: .25em 0; */
-  height: 6em;
+  border-color: #333232;
+  height: 4.5em;
   font-weight: 600;
   font-size: 1em;
   padding: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all .3 ease-in-out;
- }
-
- .FAQ-title i {
-  font-size: 2em;
  }
 
  .FAQ-title:hover {
   background-color: rgb(68, 68, 68);
  } 
  
- 
 .FAQ-content { 
-  width: 100%;
   max-height: 0;
+  width: 100%;
   overflow: hidden;
-  transition: height all .3 ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .FAQ.active .FAQ-content {
-  max-height: fit-content;
+  max-height: 300px;
 }
+
+.FAQ i {
+  font-size: 2em;
+ }
+
+ .FAQ.active i {
+  transition: all .005s ease-in-out;
+  transform: rotate(45deg);
+ }
+
 
 .FAQ-content p {
   background-color: #2D2D2D;

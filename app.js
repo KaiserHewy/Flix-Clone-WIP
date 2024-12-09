@@ -72,6 +72,8 @@ titleBox1.addEventListener("mouseout", titleClear1);
 titleBox2.addEventListener("mouseout", titleClear1);
 titleBox3.addEventListener("mouseout", titleClear1);
 
+
+
 // FAQ DROPDOWN
 const faqs = document.querySelectorAll(".FAQ")
 
@@ -81,6 +83,11 @@ faqs.forEach((faq)=>{
       faq.classList.remove("active")
     }else{
       faq.classList.add("active")
+      faqs.forEach((otherFaq)=>{
+        if(otherFaq != faq){
+          otherFaq.classList.remove("active")
+        }
+      })
     }
   })
 })
